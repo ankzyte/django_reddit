@@ -1,0 +1,223 @@
+body{
+    background-color:#0B1416;
+    margin:0px;
+    padding:0px;
+}
+
+.main-container{
+    background-color: #1B1B1B;
+    height: 100vh;
+}
+.navbar{
+    height:3rem;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    margin-top:0px;
+    margin-bottom:0px;
+    border-bottom: 1px solid #3C4345;
+    background-color: #1B1B1B;
+}
+
+.navbar .logo img{
+    width: 120px;
+}
+
+.searchbar input{
+    padding:10px 15px;
+    border-radius: 16px;
+    border:none;
+    background-color: #272628;
+    width: 920px;
+
+}
+
+.right-navdiv button{
+    padding:10px 15px;
+    border-radius: 16px;
+    border:none;   
+}
+
+.right-navdiv .button3{
+    color:white;
+    background-color: inherit;
+    border-radius: 50%;
+    font-size: 20px;
+    padding:4px 7px;
+    cursor:pointer;
+}
+
+.right-navdiv .button3:hover{
+    background-color: #313130;
+}
+
+.right-navdiv .button4{
+    color:white;
+    background-color: #313130;
+    font-size: 14px;
+    cursor:pointer;
+    padding:0px 15px;
+    height: 2rem;
+}
+.right-navdiv .button4:hover{
+    background-color: #353436;
+}
+.right-navdiv{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    align-items: center;
+    width:360px;
+    justify-content: space-between;
+}
+.right-navdiv .profile-button{
+    display: flex;
+    align-items: center;
+    color:white;
+    background-color: inherit;
+    padding:8px;
+    border:1px solid #1B1A1A;
+}
+
+.profile-button span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100px;
+    margin-left: 4px;
+}
+
+.profile-button:hover{
+    border:1px solid #353436;
+}
+
+.profile-button img{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+
+.right-navdiv .menu{
+    display:none;
+    position:absolute;
+    width: 250px;
+    background-color: #0F1A1C;
+    padding:5px 0px;
+    top:3.1rem;
+    right:10px;
+    border:1px solid #3C4345;
+    background-color: inherit;
+}
+.menu a{
+    display:block;
+    padding:12px 30px;
+    text-decoration: none;
+    color:white;
+    background-color:inherit;
+}
+
+.menu a:hover{
+    background-color: #131F23;
+}
+
+.menu span{
+    display:block;
+    padding:12px 30px;
+    color:white;
+    background-color:inherit;
+    cursor: pointer;
+}
+.menu span:hover{
+    background-color :#131F23;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin:auto;
+}
+
+.form-container .header{
+    margin-bottom:16px;
+}
+
+.form-container .header h2{
+    color:#CADADD;
+}
+
+.form-container .buttons button{
+    display: block;
+    float:right;
+    padding:12px;
+    border-radius: 24px;
+    border:none;
+    background-color: #0045AC;
+    color:white;
+    font-weight: bold;
+    margin-left:20px;
+}
+
+.form-container .buttons button:hover{
+    background-color: #1870F4;
+}
+
+.form-container .post-image{
+    width:100%;
+    font-size:16px;
+    color:#B8C5C9;
+    border: 1px solid #3D4245;
+    border-style:dashed;
+    height: 120px;
+    border-radius: 16px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:8px;
+}
+
+.alert{
+    display: block;
+    width:30%;
+    padding:12px;
+    background-color: lightgreen;
+    border:1px solid green;
+    color:green;
+}
+
+.form-container .form-section{
+    color:#808385;
+    font-size:10px;
+    width: 100%;
+    font-weight:bold;
+    border-bottom:1px solid #3C4345;
+    padding-bottom:8px;
+    margin-bottom:28px;
+}
+
+.form-container p{
+    color:#CADADD;
+    font-size: 16px;
+}
+.form-container input{
+    width:97%;
+    padding:16px 12px 16px 12px;
+    background-color: inherit;
+    color:#CADADD;
+    border: 1px solid #3C4345;
+    margin-bottom:20px;
+}
+.form-container textarea{
+    width:97%;
+    padding:16px 12px 16px 12px;
+    background-color: inherit;
+    color:#CADADD;
+    border: 1px solid #3C4345;
+    margin-bottom:20px;
+}
+
+.form-container #id_image{
+    border-style: dashed;
+    width:auto;
+}

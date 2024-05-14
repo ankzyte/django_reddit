@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit - {{ title }}</title>
+    <link rel="stylesheet" href="{% static 'settings/style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>  
+    <div class="navbar">
+        <div class="logo">
+            <a href="{% url 'blog-home' %}"><img src="{% static 'blog/reddit_logo.png' %}"></a>
+        </div>
+        <div class="searchbar">
+            <input type="search" placeholder="Search Reddit">
+        </div>
+        <div class="right-navdiv">
+            <span class="button3"><i class='bx bx-message-square-dots'></i></span>         
+            <span class="button3"><i class='bx bx-bell' ></i></span>
+            <a href="{% url 'blog-createpost' %}"><button class="button3"><i class='bx bx-plus' ></i></button></a>
+            <button class="button4">Advertise</button>
+            <div class="profile-button"><img src="{{ user.profile.image.url }}"> <span>{{ user.profile.displayName }} <i class='bx bx-chevron-down'></i></span></div>
+            <div class="menu profile-menu">
+                <a href="#">Online Status</a>
+                <a href="{% url 'user-profile' %}">Profile</a>
+                <a href="#">Create Avatar</a>
+                <a href="#">User Settings</a>
+                <a href="#">Dark Mode</a>
+                <a href="{% url 'user-logout' %}">Logout</a>
+            </div>
+        </div>     
+    </div>
+    <div class="main-container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% block content %}{% endblock %}
+    </div>
+    
+    <script src="{% static 'blog/script2.js' %}"></script>
+</body>
+</html>

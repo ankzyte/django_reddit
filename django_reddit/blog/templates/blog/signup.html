@@ -1,0 +1,16 @@
+<div class="signup-menu">
+    <span><i class='bx bx-x'></i></span>
+    <h1>Sign Up</h1>
+    <span>By continuing, you agree to our <a href="#">User Agreement</a> and acknowledge that you understand the <a href="#">Privacy Policy.</a></span>
+    <button>Continue with Google</button>
+    <button>Continue with Apple</button>
+    <table><tr><td style='width:45%'><hr/></td><td style='width:10%;text-align: center;'>OR</td><td style='width:45%'><hr/></td></tr></table>
+    <form method="post" id="form2" action="{% url 'user-register' %}">
+        {% csrf_token %}
+        <input type="text" id="signup-email" name="signup-email" placeholder="Email" required><br>
+        <input type="text" id="signup-username" name="signup-username" placeholder="Username" required><br>
+        <input type="password" id="signup-password" name="signup-password" placeholder="Password" required><br>
+        <p>Already a redditor? <a class="switch-menu">Log In</a></p>
+        <button type="submit" id="sign-up">Sign Up</button>
+    </form>
+</div>

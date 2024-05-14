@@ -1,0 +1,30 @@
+{% extends 'blog/index.html' %}
+
+{% block content %}
+<div class="posts-container">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% for post in posts %}
+    <div class="post">
+        <div class="header">        
+            <a href="#"><img src="{{ post.author.profile.image.url }}">&nbsp;{{ post.author.profile.displayName }} </a>
+            <span style="font-size: 4px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='bx bxs-circle'></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>  
+            <span style="font-size: 12px;"> {{ post.date_posted|date:"F d, Y" }}</span>
+        </div>
+        <div class="body">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.body }}</p>
+            {% if post.image %}
+            <img src="{{ post.image.url }}">
+            {% endif %}
+        </div>
+    </div>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock content %}

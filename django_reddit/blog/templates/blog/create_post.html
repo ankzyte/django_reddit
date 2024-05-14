@@ -1,0 +1,28 @@
+{% extends 'blog/index.html' %}
+
+{% block content %}
+<div class="form-container">
+    <div class="header">
+        <h2>Create Post</h2>
+        <div class="tabs">
+            <button class="active"><div>Text</div></button>
+            <button><div>Images & Video</div></button>
+            <button><div>Link</div></button>
+            <button><div>Poll</div></button>
+        </div>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.title }}
+        {{ form.body }}
+        <div class="post-image">
+            {{ form.image }}
+        </div>
+        <div class="buttons">
+            <button type="submit">Post</button>
+            <button>Save Draft</button>         
+        </div> 
+    </form>
+</div>
+
+{% endblock content %}

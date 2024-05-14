@@ -1,0 +1,24 @@
+{% extends 'settings/index.html' %}
+
+{% block content %}
+<div class="form-container">
+    <div class="header">
+        <h2>Customize Profile</h2>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-section">PROFILE INFORMATION</div>
+        <p>Display Name (optional)</p>
+        {{ form.displayName }}
+        <p class="label">About (optional)</p>
+        {{ form.about }} 
+        <div class="form-section">IMAGES</div>
+        <p class="label">Avatar</p>
+        {{ form.image }}
+        <div class="buttons">
+            <button type="submit">Update Profile</button>      
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

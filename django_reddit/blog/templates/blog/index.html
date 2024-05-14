@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit - {{ title }}</title>
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>  
+    <div class="navbar">
+        <div class="logo">
+            <a href="{% url 'blog-home' %}"><img src="{% static 'blog/reddit_logo.png' %}"></a>
+        </div>
+        <div class="searchbar">
+            <input type="search" placeholder="Search Reddit">
+        </div>
+        <div class="right-navdiv">
+            {% if user.is_authenticated %}
+            <span class="button3"><i class='bx bx-radar'></i></span>
+            <span class="button3"><i class='bx bx-message-square-dots'></i></span>
+            <a href="{% url 'blog-createpost' %}"><button class="button4"><i class='bx bx-plus' ></i>Create</button></a>
+            <span class="button3"><i class='bx bx-bell' ></i></span>
+            <span class="profile-button button3"><img src="{{ user.profile.image.url }}"></span>
+            <div class="menu profile-menu">
+                <a href="{% url 'user-profile' %}">View Profile</a>
+                <a href="{% url 'settings-updateprofile' %}">Edit Profile</a>
+                <a href="#">Achievements</a>
+                <a href="#">Contributor Program</a>
+                <a href="#">Dark Mode</a>
+                <a href="{% url 'user-logout' %}">Logout</a>
+            </div>
+            {% else %}
+            <button class="button1">Get app</button>
+            <button class="button2">Login</button>
+            <span class="settings-button button3"><i class='bx bx-dots-horizontal-rounded'></i></span>
+            <div class="menu settings-menu">
+                <span class="alt-login">Log In/ Sign up</span>
+                <a href="#">Advertise on Reddit</a>
+                <a href="#">Shop Collectible Avatars</a>
+            </div>
+            {% endif %}
+        </div>     
+    </div>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="section">
+                <a href="#" class="active">Home</a>
+                <a href="#">Popular</a>
+            </div>
+            <div class="section2">
+                <span class="dropdown">Topics <i class='bx bx-chevron-up'></i></span>
+                <div class="dropdown-content">
+                    <span class="dropdown">Gaming <i class='bx bx-chevron-up'></i></span>
+                    <div class="dropdown-content">
+                        <a href="#">Valheim</a>
+                        <a href="#">Genshin Impact</a>
+                        <a href="#">Minecraft</a>
+                    </div>
+                    <span class="dropdown">Sports <i class='bx bx-chevron-up'></i></span>
+                    <div class="dropdown-content">
+                        <a href="#">NFL</a>
+                        <a href="#">NBA</a>
+                        <a href="#">UFC</a>
+                    </div>
+                    <span class="dropdown">Buisness <i class='bx bx-chevron-up'></i></span>
+                    <div class="dropdown-content">
+                        <a href="#">GameStop</a>
+                        <a href="#">Moderna</a>
+                        <a href="#">SpaceX</a>
+                    </div>
+                    <span class="dropdown">Crypto <i class='bx bx-chevron-up'></i></span>
+                    <div class="dropdown-content">
+                        <a href="#">Cardano</a>
+                        <a href="#">Bitcoin</a>
+                        <a href="#">Litecoin</a>
+                    </div>
+                    <span class="dropdown">Television <i class='bx bx-chevron-up'></i></span>
+                    <div class="dropdown-content">
+                        <a href="#">The Real Housewives of Atlanta</a>
+                        <a href="#">The Bachelor</a>
+                        <a href="#">Wife Swap</a>
+                    </div>
+                    <span class="dropdown">Celebrity <i class='bx bx-chevron-up'></i></span>
+                    <div class="dropdown-content">
+                        <a href="#">Kim Kardashian</a>
+                        <a href="#">Doja Cat</a>
+                        <a href="#">Iggy Azalea</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section3">
+                <span class="dropdown">Resources <i class='bx bx-chevron-up'></i></span>
+                <div class="dropdown-content">
+                    <a href="#">About Reddit</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Help</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                </div>
+            </div>
+        </div>
+        <div class="body-container">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    
+    
+    {% include 'blog/login.html' %}
+
+    {% include 'blog/signup.html' %}
+    
+    {% if user.is_authenticated %}
+    <script src="{% static 'blog/script2.js' %}"></script>
+    {% else %}
+    <script src="{% static 'blog/script1.js' %}"></script>
+    {% endif %}
+</body>
+</html>

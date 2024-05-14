@@ -1,0 +1,592 @@
+body{
+    background-color:#0B1416;
+    margin:0px;
+    padding:0px;
+}
+
+.navbar{
+    height:3rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin:5px;
+    margin-top:0px;
+    margin-bottom:0px;
+    border-bottom: 1px solid #3C4345;
+}
+
+.logo img{
+    width: 120px;
+}
+
+.sidebar{
+    width:13%;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    border-right:1px solid #3C4345;
+    padding:15px;
+}
+
+.sidebar .section{
+    border-bottom:1px solid #242D2F;
+    padding-bottom:15px;
+}
+
+.sidebar .section2{
+    border-bottom:1px solid #242D2F;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+.sidebar .section3{
+    border-bottom:1px solid #242D2F;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+.sidebar a{
+    display:block;
+    padding:12px 30px;
+    text-decoration: none;
+    color:white;
+    background-color:inherit;
+    border-radius:12px;
+}
+
+.sidebar a:hover{
+    background-color:#121F22;
+}
+
+.section2 span{
+    display:block;
+    text-decoration: none;
+    color:white;
+    background-color:inherit;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.section2 .dropdown{
+    padding:12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section2 .dropdown-content span{
+    padding:12px 30px;
+}
+
+.section2 span:hover{
+    background-color:#121F22;
+}
+
+.section2 .dropdown-content a{
+    margin-left:30px;
+    border-radius: 0 12px 12px 0;
+    border-left: 1px solid #252D2E;
+    padding:12px 10px;
+}
+
+.section3 span{
+    display:block;
+    text-decoration: none;
+    color:white;
+    background-color:inherit;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.section3 span:hover{
+    background-color:#121F22;
+}
+.section3 .dropdown{
+    padding:12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section2 .dropdown i{
+    font-size: 20px;
+}
+.section3 .dropdown i{
+    font-size: 20px;
+}
+
+.searchbar input{
+    padding:10px 15px;
+    border-radius: 16px;
+    border:none;
+    background-color: #1A292C;
+    width: 540px;
+
+}
+
+.right-navdiv button{
+    padding:10px 15px;
+    border-radius: 16px;
+    border:none;   
+}
+
+.right-navdiv .button1{
+    color:white;
+    background-color: #1A292C;
+}
+
+.right-navdiv .button2{
+    color:white;
+    background-color: #D83B00;
+}
+.right-navdiv .button3{
+    color:white;
+    background-color: inherit;
+    border-radius: 50%;
+    font-size: 20px;
+    padding:6px 7px;
+    cursor:pointer;
+}
+
+.right-navdiv .button3:hover{
+    background-color: #1A292C;
+}
+
+.right-navdiv .button4{
+    color:white;
+    background-color: inherit;
+    border-radius: 16px;
+    font-size: 20px;
+    padding:6px 7px;
+    cursor:pointer;
+}
+.right-navdiv .button4:hover{
+    background-color: #1A292C;
+}
+.right-navdiv{
+    display: flex;
+    flex-direction: row;
+}
+.profile-button{
+    display: flex;
+    width:20px;
+    align-items: center;
+    justify-content: center;
+}
+.profile-button img{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+.sidebar .active{
+    background-color: #1A292C;
+}
+
+.right-navdiv .menu{
+    display:none;
+    position:absolute;
+    width: 250px;
+    margin-top:45px;
+    margin-left: -80px;
+    background-color: #0F1A1C;
+    padding:5px 0px;
+}
+
+.right-navdiv .profile-menu{
+    margin-left:-30px;
+}
+.menu a{
+    display:block;
+    padding:12px 30px;
+    text-decoration: none;
+    color:white;
+    background-color:inherit;
+}
+
+.menu a:hover{
+    background-color: #131F23;
+}
+
+.menu span{
+    display:block;
+    padding:12px 30px;
+    color:white;
+    background-color:inherit;
+    cursor: pointer;
+}
+.menu span:hover{
+    background-color: #131F23;
+}
+.login-menu{
+    display:none;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width:20%;
+    position: fixed;
+    top:20%;
+    left:35%;
+    background-color: #0E1B1C;
+    border-radius: 16px;
+    color:white;
+    text-decoration: none;
+    padding:24px 72px;
+    font-size: 14px;
+}
+
+.login-menu span{
+    margin-bottom:8px;
+}
+.login-menu .bx-x{
+    position:absolute;
+    display:block;
+    background-color: #1A282D;
+    border-radius: 50%;
+    font-size: 32px;
+    right:5%;
+}
+.login-menu button{
+    width: 100%;
+    color:#424154;
+    background-color: white;
+    border-radius:24px;
+    border:none;
+    padding:12px;
+    margin-top:8px;
+}
+
+.login-menu h1{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.login-menu form{
+    width: 100%;
+}
+
+.login-menu input{
+    width: 92%;
+    padding:16px 16px;
+    border-radius:16px;
+    border:none;
+    margin-bottom:20px;
+    background-color: #1A282D;
+}
+
+.login-menu table{
+    width: 100%;
+    padding-top:16px;
+    padding-bottom:16px;
+    color:grey;
+}
+
+.login-menu a{
+    color:#4E81CB;
+    text-decoration: none;
+}
+
+.login-menu form button{
+    background-color: #D93A00;
+    color:white;
+}
+
+.login-menu .bx-x:hover{
+    background-color: #233236;   
+}
+
+.signup-menu{
+    display:none;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width:20%;
+    position: fixed;
+    top:20%;
+    left:35%;
+    background-color: #0E1B1C;
+    border-radius: 16px;
+    color:white;
+    text-decoration: none;
+    padding:24px 72px;
+    font-size: 14px;
+}
+
+.signup-menu span{
+    margin-bottom:8px;
+}
+.signup-menu .bx-x{
+    position:absolute;
+    display:block;
+    background-color: #1A282D;
+    border-radius: 50%;
+    font-size: 32px;
+    right:5%;
+}
+.signup-menu button{
+    width: 100%;
+    color:#424154;
+    background-color: white;
+    border-radius:24px;
+    border:none;
+    padding:12px;
+    margin-top:8px;
+}
+
+.signup-menu h1{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.signup-menu form{
+    width: 100%;
+}
+
+.signup-menu input{
+    width: 92%;
+    padding:16px 16px;
+    border-radius:16px;
+    border:none;
+    margin-bottom:20px;
+    background-color: #1A282D;
+}
+
+.signup-menu table{
+    width: 100%;
+    padding-top:16px;
+    padding-bottom:16px;
+    color:grey;
+}
+
+.signup-menu a{
+    color:#4E81CB;
+    text-decoration: none;
+}
+
+.signup-menu form button{
+    background-color: #D93A00;
+    color:white;
+}
+
+.signup-menu .bx-x:hover{
+    background-color: #233236;   
+}
+
+.body-container{
+    display: flex;
+    margin-left:auto;
+    margin-right: auto;
+    width: 55%;
+    padding:16px;
+}
+
+.user-container .header{
+    border-bottom:1px solid grey;
+    padding-bottom: 5px;
+}
+.user-container .tabs button{
+    background-color: inherit;
+    padding:12px 16px;
+    border-radius: 24px;
+    border:none;
+    color:white;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.user-container .tabs .active button{
+    background-color: #32464D;
+}
+
+.user-container .tabs button:hover{
+    text-decoration: underline;
+}
+.user-container .avatar{
+    display:flex;
+    align-items: center;
+    color: white;
+    padding:0px 0px 12px 12px;
+}
+
+.user-container .avatar img{
+    height:64px;
+    width:64px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.main-container{
+    display: flex;
+    height: 100vh;
+}
+
+.user-container .header #create-post{
+    background-color: inherit;
+    border:1px solid grey;
+    color:white;
+    font-size:12px;
+    padding:8px 12px;
+    border-radius: 24px;
+    cursor:pointer;
+    margin-top:16px;
+}
+
+.user-container .header #create-post:hover{
+    border-color:white;
+}
+
+.posts-container .post{
+    background-color: inherit;
+    width:65%;
+    padding:5px 12px 5px 12px;
+    border-radius:16px;
+    margin-bottom: -5px;
+    margin-top:-5px;
+}
+
+.posts-container .post:hover{
+    background-color: #131E22;
+}
+
+.post .header{
+    display: flex;
+    align-items: center;
+    color:white;
+}
+
+.post .header span{
+    color:#A8C5C9;
+}
+
+.post .header a{
+    font-size: 16px;
+    color:#A8C5C9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.post .header a img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.post .body p{
+    color:#A8C5C9;
+    font-size: 16px;
+    margin-top:-8px;
+}
+
+.post .body h2{
+    color:white;
+    margin-top:5px;
+}
+
+.post .body img{
+    width: 100%;
+    margin-top:-8px;
+    border-radius: 16px;
+}
+
+.posts-container hr{
+    margin-left:0%;
+    width:67%;
+    border:none;
+    height: 1px;
+    background-color:#252C2F;
+}
+
+.alert{
+    display: block;
+    width:30%;
+    padding:12px;
+    background-color: lightgreen;
+    border:1px solid green;
+    color:green;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.form-container .header{
+    margin-bottom:16px;
+}
+
+.form-container .header h2{
+    color:#B8C5C9;
+}
+.form-container .header .tabs button{
+    border:none;
+    padding:16px;
+    background-color:inherit;
+    cursor: pointer;
+    color:white;
+    font-weight: bold;
+}
+
+.form-container .header .tabs button:hover{
+    background-color:rgb(35,50,54) ;
+}
+
+.form-container .header .tabs .active div{
+    padding:0 0 12px 0;
+    margin-bottom: -16px;
+    border-bottom:4px solid #639EFF;
+}
+
+.form-container #id_title{
+    width:95%;
+    background-color: inherit;
+    border:1px solid #3D4245;
+    padding:16px;
+    border-radius: 16px;
+    color:#B8C5C9;
+    font-size: 16px;
+    margin-bottom:20px;
+}
+
+.form-container #id_body{
+    display:block;
+    width:95%;
+    background-color: inherit;
+    border:1px solid #3D4245;
+    padding:16px;
+    border-radius: 16px;
+    color:#B8C5C9;
+    font-size: 16px;
+    margin-bottom:8px;
+}
+
+.form-container .buttons button{
+    display: block;
+    float:right;
+    padding:12px;
+    border-radius: 24px;
+    border:none;
+    background-color: #0045AC;
+    color:white;
+    font-weight: bold;
+    margin-left:20px;
+}
+
+.form-container .buttons button:hover{
+    background-color: #1870F4;
+}
+
+.form-container .post-image{
+    width:100%;
+    font-size:16px;
+    color:#B8C5C9;
+    border: 1px solid #3D4245;
+    border-style:dashed;
+    height: 120px;
+    border-radius: 16px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:8px;
+}
